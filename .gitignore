@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+# données et modèles : jamais versionnés
+data/
+*.wav
+*.mp3
+*.npy
+*.keras
+*.h5
