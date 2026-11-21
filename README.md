@@ -1,10 +1,10 @@
-# 🎵 Music Rhythm Analysis — BPM, beats & musical phrases
+# Music Rhythm Analysis: BPM, beats & musical phrases
 
 Automatic analysis of a song's rhythmic structure, combining **audio signal processing** and **deep learning**:
 
-1. **Tempo (BPM)** — hybrid DSP estimator (low-pass / high-pass / HPSS) and a CNN regressor on mel-spectrograms
-2. **Strong / weak beats** — librosa beat tracking *constrained* by the predicted BPM
-3. **Musical phrases** (intro, verse, chorus…) — unsupervised segmentation with a Self-Similarity Matrix
+1. **Tempo (BPM)**: hybrid DSP estimator (low-pass / high-pass / HPSS) and a CNN regressor on mel-spectrograms
+2. **Strong / weak beats**: librosa beat tracking *constrained* by the predicted BPM
+3. **Musical phrases** (intro, verse, chorus…): unsupervised segmentation with a Self-Similarity Matrix
 
 > 🇫🇷 Projet d'école d'ingénieurs (Arts et Métiers, 2025-2026) : analyse automatique de la construction rythmique d'une musique, pensée pour aider des danseurs débutants à suivre le rythme. Description en français plus bas.
 
@@ -38,11 +38,11 @@ python analyze.py my_song.wav --model best_bpm_model.keras
 
 | Approach | Data | Result |
 |---|---|---|
-| Hybrid DSP (low-pass + high-pass, fallback) | ~test set of reference tracks (70-140 BPM, mostly pop/electro) | **±5 BPM** on ~95 % of tracks* |
-| CNN v1 (mel-spectrogram regression) | [GiantSteps Tempo](https://github.com/GiantSteps/giantsteps-tempo-dataset) | MAE **20.5 BPM** — first baseline |
+| Hybrid DSP (low-pass + high-pass, fallback) | reference tracks (70-140 BPM, mostly pop/electro) | **±5 BPM** on ~95 % of tracks* |
+| CNN v1 (mel-spectrogram regression) | [GiantSteps Tempo](https://github.com/GiantSteps/giantsteps-tempo-dataset) | MAE **20.5 BPM** (first baseline) |
 | Phrase segmentation (SSM) | e.g. *Let It Be* | boundaries within **1-10 s** of the real changes |
 
-\* During the prototyping phase, the fallback rule was tuned on tracks whose BPM was known in advance — the score is a proof of concept, not a blind benchmark.
+\* During the prototyping phase, the fallback rule was tuned on tracks whose BPM was known in advance, so the score is a proof of concept, not a blind benchmark.
 
 **What I learned from the CNN v1:** the dataset was heavily concentrated around 120-140 BPM, so the network learned to predict values near the mean. This led to the time-stretching balancing step (Gaussian → uniform distribution) and to the v2 training code (sliding windows, dropout, early stopping, per-track evaluation against a "predict the mean" baseline).
 
@@ -66,6 +66,6 @@ Ce dépôt est une version restructurée et complétée du code du projet.
 
 ## Author
 
-**Teddy Thamrong** — Élève-ingénieur Arts et Métiers (expertise robotique & IA) · recherche un stage de fin d'études en IA à partir de septembre 2027.
+**Teddy Thamrong**, Élève-ingénieur Arts et Métiers (expertise robotique & IA) · recherche un stage de fin d'études en IA à partir de septembre 2027.
 
 License: MIT
