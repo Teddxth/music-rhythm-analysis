@@ -76,6 +76,6 @@ Ce dépôt est une version restructurée et complétée du code du projet.
 
 ## Author
 
-**Teddy Thamrong**, Élève-ingénieur Arts et Métiers (expertise robotique & IA) · recherche un stage de fin d'études en IA à partir de février ou de septembre 2027.
+**Teddy Thamrong**, élève-ingénieur à l'École nationale supérieure d'Arts et Métiers (ENSAM), expertise IRIS (machine learning et robotique) · recherche un stage de fin d'études en IA à partir de février ou de septembre 2027.
 
 License: MIT
