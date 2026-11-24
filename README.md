@@ -50,6 +50,8 @@ python analyze.py my_song.wav --model best_bpm_model.keras
 
 \* During the prototyping phase, the fallback rule was tuned on tracks whose BPM was known in advance, so the score is a proof of concept, not a blind benchmark.
 
+**Comparison with existing tools.** We benchmarked our BPM estimates against online BPM detectors (Tunebat, Soundplate BPM Finder, MusicExtend BPM Finder): our results were nearly identical, with models trained on far less data.
+
 **What I learned from the CNN v1:** the dataset was heavily concentrated around 120-140 BPM, so the network learned to predict values near the mean. This led to the time-stretching balancing step (Gaussian → uniform distribution) and to the v2 training code (sliding windows, dropout, early stopping, per-track evaluation against a "predict the mean" baseline).
 
 ## Key ideas
@@ -67,6 +69,8 @@ Binary-meter music only (70-140 BPM) · phrase boundaries ±10 s · next: pitch-
 ### En bref
 
 Projet réalisé en équipe de 4 élèves-ingénieurs (Arts et Métiers, encadré par R. Pile, Q. Consigny et S. Thiery). J'ai développé les algorithmes de détection du BPM par traitement du signal, le réseau de neurones et le pipeline de données.
+
+Comparés aux détecteurs de BPM en ligne (Tunebat, Soundplate, MusicExtend), nos résultats étaient quasi identiques, avec un entraînement sur beaucoup moins de données.
 
 Ce dépôt est une version restructurée et complétée du code du projet.
 
