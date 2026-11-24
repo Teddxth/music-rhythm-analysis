@@ -6,7 +6,13 @@ Automatic analysis of a song's rhythmic structure, combining **audio signal proc
 2. **Strong / weak beats**: librosa beat tracking *constrained* by the predicted BPM
 3. **Musical phrases** (intro, verse, chorus…): unsupervised segmentation with a Self-Similarity Matrix
 
-> Projet d'école d'ingénieurs (Arts et Métiers, 2025-2026) : analyse automatique de la construction rythmique d'une musique, pensée pour aider des danseurs débutants à suivre le rythme. Description en français plus bas.
+> Projet d'école d'ingénieurs (Arts et Métiers, 2025-2026) : outil pédagogique d'analyse de la construction rythmique d'une musique, pour aider les danseurs d'improvisation à repérer les changements de phrases musicales et les variations de tempo. Description en français plus bas.
+
+## Context
+
+The project started as a **teaching tool for improvisation dancers**. To improvise well, a dancer has to feel where a musical phrase starts and ends and when the tempo changes, which is hard to learn because music is difficult to structure: the same song mixes changing tempos, breaks and phrases of different lengths.
+
+Classical signal-processing algorithms were not enough to anticipate and analyse these structures reliably across genres, so we moved to **AI-based approaches** (a CNN for the tempo, combined with beat tracking and self-similarity analysis for the phrases). The goal: during their training sessions, improvisation dancers can see and learn the **phrase changes** and **tempo variations** of the music they dance to.
 
 ---
 
@@ -66,6 +72,6 @@ Ce dépôt est une version restructurée et complétée du code du projet.
 
 ## Author
 
-**Teddy Thamrong**, Élève-ingénieur Arts et Métiers (expertise robotique & IA) · recherche un stage de fin d'études en IA à partir de septembre 2027.
+**Teddy Thamrong**, Élève-ingénieur Arts et Métiers (expertise robotique & IA) · recherche un stage de fin d'études en IA à partir de février ou de septembre 2027.
 
 License: MIT
