@@ -6,7 +6,7 @@ Automatic analysis of a song's rhythmic structure, combining **audio signal proc
 2. **Strong / weak beats**: librosa beat tracking *constrained* by the predicted BPM
 3. **Musical phrases** (intro, verse, chorus…): unsupervised segmentation with a Self-Similarity Matrix
 
-> 🇫🇷 Projet d'école d'ingénieurs (Arts et Métiers, 2025-2026) : analyse automatique de la construction rythmique d'une musique, pensée pour aider des danseurs débutants à suivre le rythme. Description en français plus bas.
+> Projet d'école d'ingénieurs (Arts et Métiers, 2025-2026) : analyse automatique de la construction rythmique d'une musique, pensée pour aider des danseurs débutants à suivre le rythme. Description en français plus bas.
 
 ---
 
@@ -58,7 +58,7 @@ Binary-meter music only (70-140 BPM) · phrase boundaries ±10 s · next: pitch-
 
 ---
 
-### 🇫🇷 En bref
+### En bref
 
 Projet réalisé en équipe de 4 élèves-ingénieurs (Arts et Métiers, encadré par R. Pile, Q. Consigny et S. Thiery). J'ai développé les algorithmes de détection du BPM par traitement du signal, le réseau de neurones et le pipeline de données.
 
